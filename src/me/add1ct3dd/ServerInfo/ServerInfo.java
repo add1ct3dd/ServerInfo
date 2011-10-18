@@ -22,6 +22,7 @@ public class ServerInfo extends JavaPlugin {
 	@Override
 	public void onDisable() {
 		// TODO Auto-generated method stub
+		CONFIG.save();
 		PluginDescriptionFile pdfFile = this.getDescription();
 		this.logger.info(pdfFile.getName() + " is now disabled.");
 	}
