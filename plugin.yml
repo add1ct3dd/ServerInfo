@@ -1,0 +1,49 @@
+name: ServerInfo
+main: me.add1ct3dd.ServerInfo.ServerInfo
+version: 0.1
+description: Server Information Commands.
+commands:
+    admins:
+        description: Lists the administrators of the server.
+        permission: ServerInfo.list.admins
+        usage: Syntax error! Simply type /admins to view the admins.
+    mods:
+        description: Lists the moderators of the server.
+        permission: ServerInfo.list.mods
+        usage: Syntax error! Simply type /mods to view the moderators.
+    builders:
+        description: Lists the builders of the server.
+        permission: ServerInfo.list.builders
+        usage: Syntax error! Simply type /builders to view the builders.
+    info:
+        description: Information commands
+        usage: |
+            /info reload - Reload the config file from disk.
+            /info save - Save the config file to disk.
+            /admins - Provides a list of the administrators.
+            /mods - Provides a list of the moderators.
+            /builders - Provides a list of the builders.
+permissions:
+    ServerInfo.*:
+        default: true
+        description: Gives access to the whole plugin.
+        children:
+            ServerInfo.list.*: true
+            ServerInfo.reload: true
+            ServerInfo.save: true
+    ServerInfo.list.*:
+        description: Gives access to player lists.
+        children:
+            ServerInfo.list.admins: true
+            ServerInfo.list.mods: true
+            ServerInfo.list.builders: true
+    ServerInfo.list.admins:
+        description: Allows you view the list of administrators
+    ServerInfo.list.mods:
+        description: Allows you view the list of moderators
+    ServerInfo.list.builders:
+        description: Allows you view the list of builders
+    ServerInfo.reload:
+        description: Allows the use of /info reload
+    ServerInfo.save:
+        description: Allows the use of /info save
