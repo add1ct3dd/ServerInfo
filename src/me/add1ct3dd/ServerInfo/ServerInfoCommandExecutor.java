@@ -34,7 +34,7 @@ public class ServerInfoCommandExecutor implements CommandExecutor {
 				String admins = plugin.CONFIG.getString("admins");
 				sender.sendMessage(sprefix + admins);
 			}
-			return true;
+			return true; 
 		} else if (cmdName.equals("mods")) {
 			if (player == null) {
 				sender.sendMessage("This command can only be run by a player!");

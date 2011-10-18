@@ -15,7 +15,7 @@ public class ServerInfoPlayerListener extends PlayerListener {
 		Player p = chat.getPlayer();
 		String message = chat.getMessage();
 		String message_lower = message.toLowerCase();
-		ChatColor RED = ChatColor.RED;
+		ChatColor RED = ChatColor.RED;  
 		ChatColor WHITE = ChatColor.WHITE;
 		if (message_lower.contains("hi") & message_lower.contains("server")) {
 			p.sendMessage(RED + "[Server]" + WHITE + " Hello " + p.getName());
